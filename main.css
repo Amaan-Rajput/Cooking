@@ -1345,6 +1345,7 @@ button {
     position: fixed;
     animation: Assistance .5s cubic-bezier(0.79, -0.03, 0.35, 0.99) forwards;
     cursor: pointer;
+    z-index: 10;
 }
 
 @keyframes Assistance {
@@ -1370,6 +1371,7 @@ button {
     bottom: 15px;
     display: flex;
     flex-direction: column;
+    z-index: 10;
 }
 
 .chatbot {
