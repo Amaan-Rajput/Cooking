@@ -1150,6 +1150,9 @@ button {
     .detail-stats .stats-item {
         padding-block: 20px;
     }
+    .chatbot-icon{
+        bottom: 35px;
+    }
 }
 
 @media (min-width : 768px) {
