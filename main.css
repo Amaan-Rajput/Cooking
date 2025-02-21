@@ -1082,8 +1082,6 @@ button {
 }
 
 @media (min-width : 600px) {
-
-
     .grid-list {
         grid-template-columns: repeat(auto-fill, minmax(172px, 1fr));
     }
@@ -1150,7 +1148,7 @@ button {
     .detail-stats .stats-item {
         padding-block: 20px;
     }
-    .chatbot-icon{
+    .chatbot-icon.active {
         bottom: 35px;
     }
 }
