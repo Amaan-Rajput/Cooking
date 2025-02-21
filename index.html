@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cooking</title>
+    <!-- title-image -->
+    <link rel="icon" type="image/x-icon" href="web-icon.jpg">
+    <!--boxicons-link-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!--aladin-font-link-->
+    <link href="https://fonts.googleapis.com/css2?family=Aladin&display=swap" rel="stylesheet">
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="main.css">
+    <!-- theme-js -->
+    <script type="module" src="./JS/theme.js"></script>
+    <!-- creat-js -->
+    <script type="module" src="./JS/global.js"></script>
+    <script type="module" src="./JS/home.js"></script>
+
+</head>
+
+<body>
+
+    <header class="header">
+
+        <a href="/COOKING/index.html">
+            <img src="web-logo-light.png" class="light-logo" alt="Cooking" height="50px" width="80">
+            <img src="web-logo-dark.png" class="dark-logo" alt="Cooking" height="50px" width="80">
+        </a>
+
+        <nav class="navbar">
+            <ul class="navbar-item">
+                <li>
+                    <a href="./index.html" class="nav-link has-state active">
+                        <i class='bx bxs-home'>Home</i></a>
+                </li>
+                <li>
+                    <a href="./recipes.html" class="nav-link has-state">
+                        <i class='bx bx-bowl-hot'>recipes</i></a>
+                </li>
+                <li>
+                    <a href="./saved-recipes.html" class="nav-link has-state">
+                        <i class='bx bx-bookmarks'>Saved recipes</i></a>
+                </li>
+            </ul>
+        </nav>
+
+        <button class="icon theme-btn" aria-pressed="false" aria-label="light and dark mode">
+            <i class='bx bxs-sun dark-icon' aria-hidden="true"></i>
+            <i class='bx bx-moon light-icon' aria-hidden="true"></i>
+        </button>
+
+
+    </header>
+
+
+    <!-- mobile-nav -->
+    <nav class="mobile-navbar">
+        <ul class="nav-list">
+            <li class="nav-item">
+                <a href="./recipes.html" class="nav-link" aria-current="false">
+                    <i class='bx bx-bowl-hot item-icon'>Recipes</i></a>
+            </li>
+            <li class="nav-item">
+                <a href="./index.html" class="nav-link" aria-current="true">
+                    <i class='bx bxs-home item-icon'>Home</i></a>
+            </li>
+            <li class="nav-item">
+                <a href="./saved-recipes.html" class="nav-link" aria-current="false">
+                    <i class='bx bx-bookmarks item-icon'>Saved</i></a>
+            </li>
+        </ul>
+    </nav>
+
+    <main>
+        <article>
+            <section class="section-bar" >
+                <div class="search-area">
+                    <h3>make your mood special</h3>
+                    <div class="search-bar">
+
+                        <i class='bx bx-fork'></i>
+                        <input type="text" name="" id="search" placeholder="Search recipes..." autocomplete="off" Search>
+                        <button type="button" class="search-btn" id="search-btn"><i class='bx bx-search'></i></button>
+                    </div>
+                    <div class="recipe-suggest" recipe-suggest>
+                        
+                    </div>
+                    <p>Search any recipe e.g: burger, pizza, sandwich, toast.</p>
+                </div>
+            </section>
+
+
+            <section class="section tab">
+                <div class="content">
+                    <div class="tabs-list" role="tablist" aria-label="Meal type">
+                        <button class="tab-btn" role="tab" id="tab-1" tabindex="0" aria-controls="panel-1"
+                            aria-selected="true" Recipe-tab-btn>Breakfast</button>
+                        <button class="tab-btn" role="tab" id="tab-2" tabindex="-1" aria-controls="panel-2"
+                            aria-selected="false" Recipe-tab-btn>Lunch</button>
+                        <button class="tab-btn" role="tab" id="tab-3" tabindex="-1" aria-controls="panel-3"
+                            aria-selected="false" Recipe-tab-btn>Dinner</button>
+                        <button class="tab-btn" role="tab" id="tab-4" tabindex="-1" aria-controls="panel-4"
+                            aria-selected="false" Recipe-tab-btn>Snack</button>
+                        <button class="tab-btn" role="tab" id="tab-5" tabindex="-1" aria-controls="panel-5"
+                            aria-selected="false" Recipe-tab-btn>Teatime</button>
+                    </div>
+
+                    <div class="tab-panel" role="tabpanel" id="panel-1" aria-labelledby="tab-1" Recipe-tab-panel>
+                    </div>
+                    <div class="tab-panel" role="tabpanel" id="panel-2" aria-labelledby="tab-2" Recipe-tab-panel hidden>
+                        <div></div>
+                    </div>
+                    <div class="tab-panel" role="tabpanel" id="panel-3" aria-labelledby="tab-3" Recipe-tab-panel hidden>
+                        <div></div>
+                    </div>
+                    <div class="tab-panel" role="tabpanel" id="panel-4" aria-labelledby="tab-4" Recipe-tab-panel hidden>
+                        <div></div>
+                    </div>
+                    <div class="tab-panel" role="tabpanel" id="panel-5" aria-labelledby="tab-5" Recipe-tab-panel hidden>
+                        <div></div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section slider-section" aria-labelledby="slider-label-1" data-slider-section>
+                <div class="container">
+                    <h2 class="section-title" id="section-label-1">
+                        Latest Asian Recipes
+                    </h2>
+                    <div class="slider">
+                        <ul class="slider-wrapper" data-slider-wrapper>
+                        </ul>
+                    </div>
+
+                </div>
+            </section>
+
+            <section class="section slider-section" aria-labelledby="slider-label-1" data-slider-section>
+                <div class="container">
+                    <h2 class="section-title" id="section-label-1">
+                        Latest French Recipes
+                    </h2>
+                    <div class="slider">
+                        <ul class="slider-wrapper" data-slider-wrapper>
+                        </ul>
+                    </div>
+
+                </div>
+            </section>
+
+            <section class="section tag" aria-labelledby="tag-label">
+                <div class="container">
+
+                    <h2 class="section-title" id="tag-label">
+                        Choose your health preference
+                    </h2>
+                    <p class="section-text">Choosing your health preference is an important step towards achieving a
+                        healthier lifestyle.</p>
+
+                    <div class="tag-list">
+
+                        <a href="./recipes.html?health=egg-free" class="badge-btn has-state">Egg-Free</a>
+                        <a href="./recipes.html?health=DASH" class="badge-btn has-state">DASH</a>
+                        <a href="./recipes.html?health=dairy-free" class="badge-btn has-state">Dairy-Free</a>
+                        <a href="./recipes.html?health=crustacean-free" class="badge-btn has-state">Crustcean-Free</a>
+                        <a href="./recipes.html?health=celery-free" class="badge-btn has-state">Celery-Free</a>
+                        <a href="./recipes.html?health=fish-free" class="badge-btn has-state">Fish-Free</a>
+                        <a href="./recipes.html?health=fodmap-free" class="badge-btn has-state">FODMAP-Free</a>
+                        <a href="./recipes.html?health=gluten-free" class="badge-btn has-state">Gluten-Free</a>
+                        <a href="./recipes.html?health=immuno-supportive"
+                            class="badge-btn has-state">Immuno-Supportive</a>
+                        <a href="./recipes.html?health=keto-friendly" class="badge-btn has-state">Keto-Friendly</a>
+                        <a href="./recipes.html?health=kidney-friendly" class="badge-btn has-state">Kidney-Friendly</a>
+                        <a href="./recipes.html?health=kosher" class="badge-btn has-state">Kosher</a>
+                        <a href="./recipes.html?health=low-potassium" class="badge-btn has-state">Low Potassium</a>
+                        <a href="./recipes.html?health=low-sugar" class="badge-btn has-state">Low Sugar</a>
+                        <a href="./recipes.html?health=lupine-free" class="badge-btn has-state">Lupine-Free</a>
+                        <a href="./recipes.html?health=Mediterranean" class="badge-btn has-state">Mediterranean</a>
+                        <a href="./recipes.html?health=mollusk-free" class="badge-btn has-state">Mollusk-Free</a>
+                        <a href="./recipes.html?health=mustard-free" class="badge-btn has-state">Mustard-Free</a>
+                        <a href="./recipes.html?health=No-oil-added" class="badge-btn has-state">No oil added</a>
+                        <a href="./recipes.html?health=paleo" class="badge-btn has-state">Paleo</a>
+                        <a href="./recipes.html?health=peanut-free" class="badge-btn has-state">Peanut-Free</a>
+                        <a href="./recipes.html?health=pecatarian" class="badge-btn has-state">Pescatarian</a>
+                        <a href="./recipes.html?health=pork-free" class="badge-btn has-state">Pork-Free</a>
+                        <a href="./recipes.html?health=red-meat-free" class="badge-btn has-state">Red-Meat-Free</a>
+                        <a href="./recipes.html?health=sesame-free" class="badge-btn has-state">Sesame-Free</a>
+                        <a href="./recipes.html?health=shellfish-free" class="badge-btn has-state">Shellfish-Free</a>
+                        <a href="./recipes.html?health=soy-free" class="badge-btn has-state">Soy-Free</a>
+                        <a href="./recipes.html?health=sugar-conscious" class="badge-btn has-state">Sugar-Conscious</a>
+                        <a href="./recipes.html?health=sulfite-free" class="badge-btn has-state">Sulfite-Free</a>
+                        <a href="./recipes.html?health=tree-nut-free" class="badge-btn has-state">Tree-Nut-Free</a>
+                        <a href="./recipes.html?health=vegan" class="badge-btn has-state">Vegan</a>
+                        <a href="./recipes.html?health=vegetarian" class="badge-btn has-state">Vegetarian</a>
+                        <a href="./recipes.html?health=wheat-free" class="badge-btn has-state">Wheat-Free</a>
+
+                    </div>
+
+                </div>
+            </section>
+
+        </article>
+    </main>
+
+    <footer class="footer">
+        <p class="copyright">Copyright 20224 Code-with-amaan</p>
+
+        <a href="/" class="logo">
+            <img src="web-logo-light.png" class="light-logo" alt="Cooking" height="50px" width="80">
+            <img src="web-logo-dark.png" class="dark-logo" alt="Cooking" height="50px" width="80">
+        </a>
+
+        <a href="https://www.edamam.com/" target="_blank" class="edamam">
+            <img src="./edamam.svg" alt="edamam free recipe api" width="200" height="40">
+        </a>
+    </footer>
+
+    <!-- Assistance code -->
+    <div class="chatbot-icon active">
+        <img src="./Animation-robo.gif" alt="" srcset="" width="150px" height="150px" />
+    </div>
+    <div class="chatbot">
+        <div class="chatbot-header">
+            <img src="./robo.png" alt="" />
+            <h3>Assistance</h3>
+            <button type="button" class="minimize"><i class="fa-solid fa-angles-down"></i></button>
+            <button type="button" class="chatclose"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="chatbot-body">
+        </div>
+
+        <div class="chatbot-footer">
+            <form action="#" class="chat-form">
+                <div class="file-upload-wrapper">
+                    <input type="file" accept="images/*" id="file-input" hidden >
+                    <img src="#">
+                    <button type="button" id="file-upload" class="primry"><i class="fa-solid fa-paperclip fa-rotate-by"
+                            style="--fa-rotate-angle: -45deg;"></i></button>
+                    <button type="button" id="file-cancel" class="primry"><i class="fa-solid fa-x"></i></button>
+                </div>
+                <textarea class="massage-input" data-massage-input placeholder="type message..." required></textarea>
+                <button type="button" id="emoji-picker" class="primry"><i id="emoji-picker"
+                        class="fa-regular fa-face-smile"></i></button>
+                <button type="button" class="primry Send" id="Send"><i class="fa-regular fa-paper-plane"></i></button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/emoji-mart@latest/dist/browser.js"></script>
+
+</body>
+
+</html>

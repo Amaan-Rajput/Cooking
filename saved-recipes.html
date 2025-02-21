@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cooking</title>
+    <!-- title-image -->
+    <link rel="icon" type="image/x-icon" href="web-icon.jpg">
+    <!--boxicons-link-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!--aladin-font-link-->
+    <link href="https://fonts.googleapis.com/css2?family=Aladin&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="main.css">
+    <!-- theme-js -->
+    <script type="module" src="./JS/theme.js"></script>
+    <!-- creat-js -->
+    <script type="module" src="./JS/global.js"></script>
+    <script type="module" src="./JS/saved_recipes.js"></script>
+
+</head>
+
+<body>
+
+    <header class="header">
+
+        <a href="/COOKING/index.html">
+            <img src="web-logo-light.png" class="light-logo" alt="Cooking" height="50px" width="80">
+            <img src="web-logo-dark.png" class="dark-logo" alt="Cooking" height="50px" width="80">
+        </a>
+
+        <nav class="navbar">
+            <ul class="navbar-item">
+                <li>
+                    <a href="./index.html" class="nav-link has-state ">
+                        <i class='bx bx-home'>Home</i></a>
+                </li>
+                <li>
+                    <a href="./recipes.html" class="nav-link has-state ">
+                        <i class='bx bx-bowl-hot'>recipes</i></a>
+                </li>
+                <li>
+                    <a href="./saved-recipes.html" class="nav-link has-state active">
+                        <i class='bx bxs-bookmarks'>Saved recipes</i></a>
+                </li>
+            </ul>
+        </nav>
+
+        <button class="icon theme-btn" aria-pressed="false" aria-label="light and dark mode">
+            <i class='bx bxs-sun dark-icon' aria-hidden="true"></i>
+            <i class='bx bx-moon light-icon' aria-hidden="true"></i>
+        </button>
+
+
+    </header>
+
+
+    <!-- mobile-nav -->
+    <nav class="mobile-navbar">
+        <ul class="nav-list">
+            <li class="nav-item">
+                <a href="./recipes.html" class="nav-link" aria-current="false">
+                    <i class='bx bx-bowl-hot item-icon'>Recipes</i></a>
+            </li>
+            <li class="nav-item">
+                <a href="./index.html" class="nav-link" aria-current="false">
+                    <i class='bx bx-home item-icon'>Home</i></a>
+            </li>
+            <li class="nav-item">
+                <a href="./saved-recipes.html" class="nav-link" aria-current="true">
+                    <i class='bx bxs-bookmarks item-icon'>Saved</i></a>
+            </li>
+        </ul>
+    </nav>
+
+    <main class="detail-page-main">
+        <article class="article container saved-recipes-page" data-saved-recipes-container></article>
+    </main>
+
+    <footer class="footer">
+        <p class="copyright">Copyright 20224 Code-with-amaan</p>
+
+        <a href="/" class="logo">
+            <img src="web-logo-light.png" class="light-logo" alt="Cooking" height="50px" width="80">
+            <img src="web-logo-dark.png" class="dark-logo" alt="Cooking" height="50px" width="80">
+        </a>
+
+        <a href="https://www.edamam.com/" target="_blank" class="edamam">
+            <img src="./edamam.svg" alt="edamam free recipe api" width="200" height="40">
+        </a>
+    </footer>
+
+    <!-- Assistance code -->
+    <div class="chatbot-icon active">
+        <img src="./Animation-robo.gif" alt="" srcset="" width="150px" height="150px" />
+    </div>
+    <div class="chatbot">
+        <div class="chatbot-header">
+            <img src="./robo.png" alt="" />
+            <h3>Assistance</h3>
+            <button type="button" class="minimize"><i class="fa-solid fa-angles-down"></i></button>
+            <button type="button" class="chatclose"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="chatbot-body">
+        </div>
+
+        <div class="chatbot-footer">
+            <form action="#" class="chat-form">
+                <div class="file-upload-wrapper">
+                    <input type="file" accept="images/*" id="file-input" hidden >
+                    <img src="#">
+                    <button type="button" id="file-upload" class="primry"><i class="fa-solid fa-paperclip fa-rotate-by"
+                            style="--fa-rotate-angle: -45deg;"></i></button>
+                    <button type="button" id="file-cancel" class="primry"><i class="fa-solid fa-x"></i></button>
+                </div>
+                <textarea class="massage-input" data-massage-input placeholder="type message..." required></textarea>
+                <button type="button" id="emoji-picker" class="primry"><i id="emoji-picker"
+                        class="fa-regular fa-face-smile"></i></button>
+                <button type="button" class="primry Send" id="Send"><i class="fa-regular fa-paper-plane"></i></button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/emoji-mart@latest/dist/browser.js"></script>
+</body>
+
+</html>
