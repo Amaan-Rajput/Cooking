@@ -1097,7 +1097,7 @@ button {
     height: 150px;
     width: 150px;
     right: 5px;
-    top: 70vh;
+    border: 1px solid #000;
     display: none;
 }
 
@@ -1106,7 +1106,6 @@ button {
     position: fixed;
     animation: Assistance .5s cubic-bezier(0.79, -0.03, 0.35, 0.99) forwards;
     cursor: pointer;
-    z-index: 10;
 }
 
 @keyframes Assistance {
@@ -1126,13 +1125,13 @@ button {
     position: fixed;
     max-height: 400px;
     width: clamp(300px, 300px, 300px);
-    background: #fafafa;
+    background: var(--color-0);
     margin-inline-end: 5px;
     right: 5px;
     bottom: 15px;
     display: flex;
     flex-direction: column;
-    z-index: 10;
+    border-radius: 5px;
 }
 
 .chatbot {
@@ -1168,8 +1167,8 @@ button {
     align-items: center;
     border-top-right-radius: 4px;
     border-top-left-radius: 4px;
-    background: #a45bcc;
-    box-shadow: 0px 1px 3px 1px rgb(128, 84, 151);
+    background: var(--color-9);
+    box-shadow: 0px 1px 3px 1px var(--color-8);
     opacity: 10;
 }
 
@@ -1205,7 +1204,7 @@ button {
     border: none;
     outline: none;
     background: transparent;
-    color: #522E66;
+    color: var(--color-10);
     rotate: var(--angle);
 }
 
@@ -1222,7 +1221,6 @@ button {
         --angle: 180deg;
     }
 }
-
 
 .chatbot .chatbot-body {
     position: relative;
@@ -1273,11 +1271,11 @@ button {
     word-break: break-all;
     text-wrap: break-word;
     word-wrap: break-word;
-    background: linear-gradient(to right, #ffffff, #F3F3F3);
+    background: linear-gradient(to right, var(--color-4), var(--color-6));
     padding: 8px;
     padding-inline-start: 12px;
     border-radius: 0px 15px 15px 15px;
-    box-shadow: -1px -1px 3px 1px rgba(186, 184, 187, 1);
+    box-shadow: -1px -1px 3px 1px var(--color-6);
 }
 
 .chatbot-body .ai-massage-box .ai-massage .dot {
@@ -1357,8 +1355,8 @@ button {
     margin-block: 5px;
     margin-inline-end: 3px;
     border-radius: 15px 0px 15px 15px;
-    background: linear-gradient(to right, #7B4599, #a45bcc);
-    color: #FCFCFC;
+    background: linear-gradient(to right, var(--color-5), var(--color-9));
+    color: var(--color-10);
     box-shadow: 1px 1px 3px 1px rgb(128, 84, 151);
 }
 
@@ -1379,7 +1377,7 @@ button {
     position: absolute;
     width: 100%;
     bottom: 0;
-    background: #fafafa;
+    background: var(--color-6);
 }
 
 .chatbot-footer .chat-form {
@@ -1393,7 +1391,7 @@ button {
     display: flex;
     align-items: center;
     justify-content: end;
-    box-shadow: 0px -1px 3px 1px rgba(186, 184, 187, 1);
+    box-shadow: 0px -1px 3px 1px var(--color-4);
 }
 
 .chatbot .chatbot-footer .chat-form .massage-input {
@@ -1428,7 +1426,7 @@ button {
 }
 
 .chatbot-footer .chat-form .Send {
-    background-color: #a45bcc;
+    background-color: var(--color-2);
     color: #fafafa;
     place-self: center;
     display: none;
@@ -1485,8 +1483,9 @@ body.show-emoji-picker em-emoji-picker {
     display: block;
 }
 
-
 @media (min-width : 600px) {
+
+
     .grid-list {
         grid-template-columns: repeat(auto-fill, minmax(172px, 1fr));
     }
@@ -1553,9 +1552,6 @@ body.show-emoji-picker em-emoji-picker {
     .detail-stats .stats-item {
         padding-block: 20px;
     }
-    .chatbot-icon.active {
-        bottom: 35px;
-    }
 }
 
 @media (min-width : 768px) {
@@ -1603,7 +1599,7 @@ body.show-emoji-picker em-emoji-picker {
         background-color: var(--color-7);
         border-radius: 500px 500px 0 0;
     }
-    
+
     .chatbot-icon.active {
         top: 75vh;
     }
@@ -1720,11 +1716,12 @@ body.show-emoji-picker em-emoji-picker {
 }
 
 @media (min-width : 1400px) {
-.container{
-    margin-inline: auto;
-    max-width: 1280px;
-}
-.slider-item{
-    min-width: calc(16.66%-6.66px);
-}
+    .container {
+        margin-inline: auto;
+        max-width: 1280px;
+    }
+
+    .slider-item {
+        min-width: calc(16.66%-6.66px);
+    }
 }
