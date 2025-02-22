@@ -88,6 +88,7 @@ massageInput.addEventListener("keydown", (e) => {
 const inputInitHeight = massageInput.scrollHeight;
 
 massageInput.addEventListener('input', () => {
+    massageInput.style.textTransform = "capitalize";
     massageInput.style.height = `${inputInitHeight}px`;
     massageInput.style.height = `${massageInput.scrollHeight}px`;
     massageInput.style.maxHeight = "50px";
