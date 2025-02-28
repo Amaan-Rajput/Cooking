@@ -1097,6 +1097,7 @@ button {
     height: 150px;
     width: 150px;
     right: 5px;
+    top: 70vh;
     display: none;
 }
 
@@ -1127,7 +1128,7 @@ button {
     background: var(--color-0);
     margin-inline-end: 5px;
     right: 5px;
-    bottom: 15px;
+    bottom: 70px;
     display: flex;
     flex-direction: column;
     border-radius: 5px;
@@ -1601,6 +1602,9 @@ body.show-emoji-picker em-emoji-picker {
 
     .chatbot-icon.active {
         top: 75vh;
+    }
+    .chatbot.active{
+        bottom: 15px;
     }
 }
 
